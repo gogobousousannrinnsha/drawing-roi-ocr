@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "package": "drawing-roi-ocr",
+  "version": "0.1.1",
+  "distribution_kind": "source-with-bundled-core-online-setup",
+  "bundled_core": {
+    "name": "docuworks-ctypes",
+    "version": "1.0.1",
+    "path": "bundled/core/docuworks_ctypes-1.0.1-py3-none-any.whl",
+    "sha256": "7ea3a6d1623238180ccb400237a753b616dccf72761ba83d97fee1b55f7f5f58"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 121,
+      "sha256": "d37d03a4f413f93516237d34a4a88105ec9f5a2b421e07193e7404060c070552"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1078,
+      "sha256": "3883fc25fe83af3f0fea9c55321845c5c7865b2ebce54657463f7136790e214d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9802,
+      "sha256": "bfc82c672ccdfba3972d46d68bd236d41bf1ffa28434fbdb786a42f27cd37f16"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 4226,
+      "sha256": "a46d96aa43c906ea4963fbcd9daafc922587c163e9fdd26305c2fc4e991829f2"
+    },
+    {
+      "path": "assets/bundled-core.json",
+      "bytes": 452,
+      "sha256": "34760ac55300ec24733d245cf8602ce91090de5ac7a673452b52331fd8529d86"
+    },
+    {
+      "path": "assets/ocr-models.json",
+      "bytes": 1353,
+      "sha256": "0f867ba9b3eb8f8b3fd0f75e3aca3bfbb3128eb838ab2720c37e254de8f2e5b7"
+    },
+    {
+      "path": "assets/python-packages.json",
+      "bytes": 46426,
+      "sha256": "aaf48faf375c202d1ec039b714097de35c064cce04b944a33d7ba8b0f032c8c1"
+    },
+    {
+      "path": "assets/python-runtime.json",
+      "bytes": 1736,
+      "sha256": "fd2541c39df185d2aba38b7e8417ea54d38a1511ac6881cbcd790c0f61d360af"
+    },
+    {
+      "path": "assets/requirements-runtime.lock.txt",
+      "bytes": 21669,
+      "sha256": "c9f44de1e9d2fd6e79d66bf95b3add833ad24385f4649bde0976733ffbcc4002"
+    },
+    {
+      "path": "bundled/core/docuworks_ctypes-1.0.1-py3-none-any.whl",
+      "bytes": 48173,
+      "sha256": "7ea3a6d1623238180ccb400237a753b616dccf72761ba83d97fee1b55f7f5f58"
+    },
+    {
+      "path": "docs/template-format.md",
+      "bytes": 2438,
+      "sha256": "c1aeab8beb323a431201ea4795105409888a168b375556fec6e7ca1fe0ddd74c"
+    },
+    {
+      "path": "docs/verification.md",
+      "bytes": 5743,
+      "sha256": "1472224986f9cf3bd916d044f22d24086b01051b2fa654ed9079170c0786fe58"
+    },
+    {
+      "path": "licenses/README.md",
+      "bytes": 566,
+      "sha256": "8d8d9cb96bb2e7494b6bf5e8aec4b923c9ca731a1b1d9c91d237221a2c21a6d2"
+    },
+    {
+      "path": "licenses/core/LICENSE.txt",
+      "bytes": 1099,
+      "sha256": "e7d5978106212cd478c3103bdbec9aa776fc952a12c37c7c25760e4191fad84d"
+    },
+    {
+      "path": "licenses/core/NOTICE.md",
+      "bytes": 1567,
+      "sha256": "d130bed0eed30078b86db7f3e4bcf241175e0c8c998bbad6e52f02eff10055f8"
+    },
+    {
+      "path": "licenses/ocr/LICENSE-APACHE-2.0.txt",
+      "bytes": 11376,
+      "sha256": "3840c5c0c61c294264d2dd77b8777be6ddd90121ef4e0e64abcd22edea581d6e"
+    },
+    {
+      "path": "licenses/ocr/NOTICE.txt",
+      "bytes": 388,
+      "sha256": "c1a0801d1445be1ebc9092c3f47cf8551577aec0bf62fff45c9ea092732052dd"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 725,
+      "sha256": "b50237acbc30ef282d41a90a82a8db959408b8e3ff20f8a21a20d88aafb3ae7e"
+    },
+    {
+      "path": "scripts/bootstrap.py",
+      "bytes": 24029,
+      "sha256": "513c8df7171915287c2e2ebef6adc97879b1f1e902400da50b1dda537ec9d069"
+    },
+    {
+      "path": "scripts/build_source_zip.py",
+      "bytes": 8368,
+      "sha256": "30e075ddcdbaf1913dc95cdcb600bcedfa283957390fc6ad9dd9971d29fcb9ec"
+    },
+    {
+      "path": "scripts/bundled_core.py",
+      "bytes": 10170,
+      "sha256": "2193a3ba3601a1ec604dcfc6d1dd477eb3e16c78d706132136f47413889e9bc1"
+    },
+    {
+      "path": "scripts/setup.ps1",
+      "bytes": 6352,
+      "sha256": "ffc97f5767a9dbdd8b99f54ca6b0594870b51319c8593857e22d6cd498695465"
+    },
+    {
+      "path": "scripts/setup_python.ps1",
+      "bytes": 19246,
+      "sha256": "b719464455a3019018d00f70e8b3c440a51f35f0dbacc44ef931dc0b9b081980"
+    },
+    {
+      "path": "source/drawing_roi_ocr/__init__.py",
+      "bytes": 95,
+      "sha256": "ffe37edee34595fc6654c3141c4e3da157ecff4d19cdfd70cb3791765b2f0f5d"
+    },
+    {
+      "path": "source/drawing_roi_ocr/excel.py",
+      "bytes": 6641,
+      "sha256": "88eb42e391c73faf9ab88756e0025c502af540563e7f7b61877f1755dacca5db"
+    },
+    {
+      "path": "source/drawing_roi_ocr/ocr_image.py",
+      "bytes": 14940,
+      "sha256": "eadf6e0b9199aba8623f465bf0e2d9d28898d659b6588a4bdf5f1edc05873b78"
+    },
+    {
+      "path": "source/drawing_roi_ocr/pdf_ocr.py",
+      "bytes": 20950,
+      "sha256": "a274e8ad0bfd3c6fb19e3206701db8914ca95523f875fdb5b5ab2a4dfcb89583"
+    },
+    {
+      "path": "source/drawing_roi_ocr/roi_ocr.py",
+      "bytes": 12499,
+      "sha256": "962ae050225c9026279707af8fca40f827654dea698fdf531146171667e6eea5"
+    },
+    {
+      "path": "source/drawing_roi_ocr/selfcheck.py",
+      "bytes": 3515,
+      "sha256": "eab00242e1ca185a122b6a194eacfd6716a8a772f06ebc7de83ddec5d2336b66"
+    },
+    {
+      "path": "source/drawing_roi_ocr/storage.py",
+      "bytes": 3197,
+      "sha256": "c82a64900f61199eba4859877ae8f3ec09d1a0a98227dd363b3d88a72d441bfb"
+    },
+    {
+      "path": "source/drawing_roi_ocr/templates.py",
+      "bytes": 17307,
+      "sha256": "e09f0aebafffd40346e592b6bcae4fe8c270f30f6ae0d66f9efaeffc71638599"
+    },
+    {
+      "path": "source/drawing_roi_ocr/workflow.py",
+      "bytes": 15836,
+      "sha256": "e1d949c82604692c79022856e771e08f5c006532588d6c54ff4a0fa4be163829"
+    },
+    {
+      "path": "source/drawing_roi_ocr/xdw_input.py",
+      "bytes": 10521,
+      "sha256": "d31c7cc487cf0529cb8de37ecec9f27e4ef9a51063cd74956a3233f2ba017085"
+    },
+    {
+      "path": "source/run.py",
+      "bytes": 6060,
+      "sha256": "e540daa3bb3dc9f44102b159796964ae65651be318b7dec76477040d4e5d3c7d"
+    },
+    {
+      "path": "tests/test_distribution.py",
+      "bytes": 4428,
+      "sha256": "8349b2e592e3f84081467b852e82254768bc547d932f122da57b0093dc5e29b9"
+    },
+    {
+      "path": "tests/test_paths.py",
+      "bytes": 3196,
+      "sha256": "61f4fb7545f77ec268665d91e2fd09029a48da7754b0c25c03a232bcbdc57562"
+    },
+    {
+      "path": "tests/test_roi_ocr.py",
+      "bytes": 12793,
+      "sha256": "d59c55f2f64f555ad18c81a2d7be7b78c822811d5e461afa442aa5cec50e8554"
+    },
+    {
+      "path": "tests/test_setup.py",
+      "bytes": 12781,
+      "sha256": "4fb5434a8893a9a7516ac17e2a1831d79584dbba16c2f35584880cab086df959"
+    },
+    {
+      "path": "tests/test_templates.py",
+      "bytes": 15979,
+      "sha256": "852b1ba8fabe412bf518df2459a4ae6818007b7559354f3633420024f25e9635"
+    },
+    {
+      "path": "tests/test_workflow.py",
+      "bytes": 9700,
+      "sha256": "155c0cd76d647b764fcb011680244185df6de5e0df79983979b861d8702285a8"
+    },
+    {
+      "path": "tests/test_xdw_paths.py",
+      "bytes": 4467,
+      "sha256": "0e1f62b411308723eb62ab22c6115f2108d7f147d52611680aea9e547fa06a0a"
+    },
+    {
+      "path": "テンプレート作成.bat",
+      "bytes": 635,
+      "sha256": "e3acd380468ac04c8550ab6a3455488052e6142b81ca0bc6e07399bd7d581c76"
+    },
+    {
+      "path": "初期設定.bat",
+      "bytes": 641,
+      "sha256": "26a365117dbf35205a954d1f2f8d9cc6e828bd7710caf0c57f4b133b7f1d5c55"
+    },
+    {
+      "path": "抽出.bat",
+      "bytes": 634,
+      "sha256": "a2d6334e124f5998d7782fb7112cc5dd23abe68f019a706c4c38804fc379ae0e"
+    }
+  ]
+}

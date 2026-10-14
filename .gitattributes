@@ -1,0 +1,2 @@
+# Preserve audited bytes and accept Windows CRLF line endings.
+* -text whitespace=cr-at-eol

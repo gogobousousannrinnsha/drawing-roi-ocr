@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+runtime/
+models/
+downloads/
+temp/
+data/
+exports/
+logs/
+input/
+templates/
+見本/
+dist/

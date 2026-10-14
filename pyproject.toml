@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drawing-roi-ocr"
+version = "0.1.1"
+description = "Folder-contained fixed-layout PDF/XDW region OCR and Excel export"
+requires-python = "==3.13.*"
+license = "MIT"
+dependencies = ["Pillow==12.3.0", "numpy==2.3.5", "pypdfium2==5.13.0", "pypdf==6.20.0", "XlsxWriter==3.2.9", "filelock==3.32.5", "paddleocr==3.7.0", "paddlex==3.7.2", "paddlepaddle-gpu==3.2.2"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools]
+package-dir = {"" = "source"}
+
+[tool.setuptools.packages.find]
+where = ["source"]
+include = ["drawing_roi_ocr*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["source"]
