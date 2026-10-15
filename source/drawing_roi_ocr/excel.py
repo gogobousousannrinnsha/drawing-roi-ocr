@@ -80,6 +80,11 @@ def write_excel(path, result):
                                 _text(detail, detail_count, dcol, value, wrap)
             main.autofilter(0, 0, len(result["pages"]), len(main_headers) - 1)
             detail.autofilter(0, 0, detail_count, len(DETAIL_HEADERS) - 1)
+            if detail_count:
+                detail.data_validation(1, 3, detail_count, 3, {"validate": "list",
+                    "source": [*STATES.values(), "確認済み"],
+                    "input_title": "原本を確認した行",
+                    "input_message": "確認後に「確認済み」を選択し、保存してください。"})
         if os.path.lexists(path):
             raise FileExistsError("既存のExcelは上書きしません。")
         os.rename(temporary, path)

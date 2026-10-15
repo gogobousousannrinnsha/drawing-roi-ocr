@@ -17,7 +17,7 @@ import uuid
 import zipfile
 
 APP_NAME = "drawing-roi-ocr"
-APP_VERSION = "0.1.1"
+APP_VERSION = "0.1.2"
 MAX_ROOT_UTF16 = 40
 GIB = 1024 ** 3
 ALLOWED_HOSTS = {"files.pythonhosted.org", "paddle-whl.cdn.bcebos.com", "paddle-model-ecology.bj.bcebos.com"}

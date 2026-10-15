@@ -133,7 +133,7 @@ def test_setup_success_records_ocr_only_and_relative_evidence(setup_root, monkey
     monkeypatch.setattr(bootstrap, "check_application", lambda _: reports)
     assert bootstrap.run_setup(setup_root) == 0
     record = bootstrap.read(setup_root/"data/setup-complete.json")
-    assert record["status"] == "complete" and record["app_version"] == "0.1.1"
+    assert record["status"] == "complete" and record["app_version"] == "0.1.2"
     assert record["checks"] == reports
     assert not any(key in record for key in ("ollama_archive_sha256", "model_digest", "model"))
 

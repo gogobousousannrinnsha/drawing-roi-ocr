@@ -230,7 +230,7 @@ function Invoke-PythonSetup {
         $reason = 'Application path is too long (' + $setupFull.Length + '/40 UTF-16 units). Move the complete folder to E:\ROI-OCR and try again.'
         $failureFolder = Join-Path $setupFull 'data'
         [IO.Directory]::CreateDirectory($failureFolder) | Out-Null
-        Write-AtomicJson (Join-Path $failureFolder 'setup-complete.json') @{status='failed';app_name='drawing-roi-ocr';app_version='0.1.1';stage='root_path';reason=$reason;root_utf16_units=$setupFull.Length;max_root_utf16_units=40}
+        Write-AtomicJson (Join-Path $failureFolder 'setup-complete.json') @{status='failed';app_name='drawing-roi-ocr';app_version='0.1.2';stage='root_path';reason=$reason;root_utf16_units=$setupFull.Length;max_root_utf16_units=40}
         throw $reason
     }
     New-Item -ItemType Directory -Path $setupFull -Force | Out-Null

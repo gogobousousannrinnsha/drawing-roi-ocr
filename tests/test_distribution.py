@@ -23,7 +23,7 @@ def distribution_root(tmp_path):
         (root/name).write_text("authored source\n", encoding="utf-8")
     package = root/"source/drawing_roi_ocr"
     package.mkdir(parents=True)
-    (package/"__init__.py").write_text("__version__ = '0.1.1'\n", encoding="utf-8")
+    (package/"__init__.py").write_text("__version__ = '0.1.2'\n", encoding="utf-8")
     (root/"source/run.py").write_text("print('authored test fixture')\n", encoding="utf-8")
     return root
 

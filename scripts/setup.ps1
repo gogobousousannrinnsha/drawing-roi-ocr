@@ -16,7 +16,7 @@ function Write-SetupMarker($Value) {
 if ($taskRoot.Length -gt 40) {
     $taskReason = 'Application path is too long (' + $taskRoot.Length + '/40 UTF-16 units). Move the complete folder to E:\ROI-OCR and try again.'
     [IO.Directory]::CreateDirectory((Join-Path $taskRoot 'data')) | Out-Null
-    Write-SetupMarker @{status='failed';app_name='drawing-roi-ocr';app_version='0.1.1';stage='root_path';reason=$taskReason;root_utf16_units=$taskRoot.Length;max_root_utf16_units=40}
+    Write-SetupMarker @{status='failed';app_name='drawing-roi-ocr';app_version='0.1.2';stage='root_path';reason=$taskReason;root_utf16_units=$taskRoot.Length;max_root_utf16_units=40}
     throw $taskReason
 }
 if (-not (Test-Path -LiteralPath (Join-Path $taskRoot 'source\run.py'))) { throw 'Application source is missing. Extract the complete ZIP.' }
@@ -24,7 +24,7 @@ foreach ($taskFolder in @('logs', 'data', 'temp')) { New-Item -ItemType Director
 try {
     $taskEntryLock = [IO.File]::Open((Join-Path $taskRoot 'data\setup-entry.lock'), 'OpenOrCreate', 'ReadWrite', 'None')
     $taskLauncherStarted = $true
-    Write-SetupMarker @{ status = 'in_progress'; app_name = 'drawing-roi-ocr'; app_version = '0.1.1'; stage = 'python' }
+    Write-SetupMarker @{ status = 'in_progress'; app_name = 'drawing-roi-ocr'; app_version = '0.1.2'; stage = 'python' }
     # Explicit loading avoids the observed Windows PowerShell 5 security-module autoload failure.
     Import-Module (Join-Path $PSHOME 'Modules\Microsoft.PowerShell.Security') -ErrorAction Stop
     Start-Transcript -LiteralPath $taskLog -ErrorAction Stop | Out-Null
@@ -74,7 +74,7 @@ try {
     if ($taskLauncherStarted) {
         $taskCurrent = if (Test-Path -LiteralPath $taskMarker) { Get-Content -LiteralPath $taskMarker -Raw | ConvertFrom-Json } else { $null }
         if (-not $taskCurrent -or $taskCurrent.status -eq 'in_progress') {
-            Write-SetupMarker @{ status = 'failed'; app_name = 'drawing-roi-ocr'; app_version = '0.1.1'; stage = 'python_or_launcher'; reason = $_.Exception.Message }
+            Write-SetupMarker @{ status = 'failed'; app_name = 'drawing-roi-ocr'; app_version = '0.1.2'; stage = 'python_or_launcher'; reason = $_.Exception.Message }
         }
     }
     throw

@@ -76,6 +76,12 @@ def execute(args, root):
         output = export_result(root, selected_result(root, args.run))
         print(f"新しいExcelを保存しました: {output}", flush=True)
         return 0
+    if command == "mark":
+        from drawing_roi_ocr.markers import mark_confirmed, workbook_files
+        workbook = (Path(args.excel) if args.excel else choose(workbook_files(root), "確認済みを付けたExcel",
+                    lambda p: str(p.relative_to(root))))
+        mark_confirmed(root, workbook, result_reference=args.run)
+        return 0
     folders = sorted((p for p in (root / "templates").iterdir() if p.is_dir()), key=lambda p: p.name)
     template = local_path(root, args.template) if args.template else choose(folders, "テンプレート様式", lambda p: p.name)
     return workflow.extract(root, template)[0]
@@ -84,12 +90,13 @@ def execute(args, root):
 def main(argv=None):
     parser = argparse.ArgumentParser(description="図面範囲OCR")
     parser.add_argument("command", choices=["template", "extract", "template-create", "template-split",
-                                            "extract-run", "export", "selfcheck"])
+                                            "extract-run", "export", "selfcheck", "mark"])
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parent.parent)
     parser.add_argument("--page", type=int)
     parser.add_argument("--template", help="アプリ内のテンプレートフォルダー相対パス")
     parser.add_argument("--edited", help="編集済みXDWのアプリ内相対パス")
     parser.add_argument("--run", help="再出力する保存結果のアプリ内相対パス")
+    parser.add_argument("--excel", help="確認済みを付けたExcel（絶対パスまたはアプリ内の相対パス）")
     args = parser.parse_args(argv)
     from drawing_roi_ocr.workflow import ensure_layout
     from drawing_roi_ocr.storage import new_id, require_short_root

@@ -12,9 +12,9 @@ import sys
 import zipfile
 
 APP_NAME = "drawing-roi-ocr"
-APP_VERSION = "0.1.1"
+APP_VERSION = "0.1.2"
 ROOT_FILES = frozenset({"README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "pyproject.toml", ".gitignore",
-                        "初期設定.bat", "テンプレート作成.bat", "抽出.bat"})
+                        "初期設定.bat", "テンプレート作成.bat", "抽出.bat", "確認済みマーカー.bat"})
 REQUIRED_ROOT = ROOT_FILES - {".gitignore", "pyproject.toml"}
 SCRIPT_FILES = frozenset({"bootstrap.py", "setup.ps1", "setup_python.ps1", "bundled_core.py", "build_source_zip.py"})
 ASSET_FILES = frozenset({"python-runtime.json", "python-packages.json", "requirements-runtime.lock.txt",
