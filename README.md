@@ -1,12 +1,12 @@
-# 図面範囲OCR v0.1.2 候補
+# 図面範囲OCR v0.1.2
 
 固定様式のPDF・XDWから、項目ごとに指定した範囲を切り出してOCRし、Excel一覧へ出力するWindows用アプリです。読み取った文字をそのまま出力し、結果は利用者が原本と照合します。
 
 ## 入手
 
-公開済み版は[v0.1.1 Pre-release](https://github.com/gogobousousannrinnsha/drawing-roi-ocr/releases/tag/v0.1.1)の`roi-ocr-0.1.1-source.zip`です。ソース・同封Core・オンライン初期設定を含みます。初期設定でPythonとOCR資産を取得するため、構築済み環境の配布ではありません。SHA-256と内容一覧もReleaseへ添付しています。
+公開版は[v0.1.2 Pre-release](https://github.com/gogobousousannrinnsha/drawing-roi-ocr/releases/tag/v0.1.2)の`roi-ocr-0.1.2-source.zip`です。ソース・同封Core・オンライン初期設定を含みます。初期設定でPythonとOCR資産を取得するため、構築済み環境の配布ではありません。SHA-256と内容一覧もReleaseへ添付しています。
 
-この作業版では`確認済みマーカー.bat`を追加しています。公開済みv0.1.1にはこのBATは含まれません。
+v0.1.2では`確認済みマーカー.bat`を追加しています。旧v0.1.1にはこのBATは含まれません。
 
 ZIPの中身を`E:\ROI-OCR`等へ展開し、READMEとBATがそのフォルダーの直下にある状態にしてください。アーカイブ名の長いフォルダーを重ねて作らないでください。確認済み・未確認の環境は下記の「検証と対応範囲」を参照してください。
 
